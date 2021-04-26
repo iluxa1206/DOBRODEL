@@ -1,0 +1,21 @@
+{% extends "base.html" %} {% block content %}
+<div id="prof_list">
+    {% if list_type == "ol" %}
+    <h2>Список профессий</h2>
+    <ol>
+        {% for profession in professions %}
+        <li>{{ profession }}</li>
+        {% endfor %}
+    </ol>
+    {% elif list_type == "ul" %}
+    <h2>Список профессий</h2>
+    <ul>
+        {% for profession in professions %}
+        <li>{{ profession }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <h1>Неправильный аргумент. Повторите попытку</h1>
+    {% endif %}
+</div>
+{% endblock %}
